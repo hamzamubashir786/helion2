@@ -1,0 +1,591 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    border: none;
+    font-family: sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+nav{
+    width: 100%;
+    height: 60px;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px ;
+    justify-content: space-between;
+    position:static;
+    background-color: black ;
+    color: white;
+}
+nav>ul{
+    display: flex;
+    position: relative;
+}
+nav>ul>li{
+    padding: 20px;
+    font-family: "Mukta", sans-serif;
+    transition: 1s;
+}
+#vertical{
+    transition: 1s;
+    padding: 20px;
+    display: none;
+}
+.homedrop{
+    width: 100%;
+    height: max-content;
+    border: 1px solid;
+    background-color: white;
+    opacity: 0;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    visibility: hidden;
+    color: black;
+    transition: .5s;
+    display: flex;
+    z-index: 100;
+
+}
+.homedrop ul{
+    width: 50%;
+}
+.homedrop ul li{
+    padding: 10px 20px;
+}
+.homedrop ul li:first-child{
+    color: red;
+}
+.homedrop:hover{
+    opacity: 1;
+    visibility: visible;
+}
+nav>ul>.home:hover~.homedrop{
+    opacity: 1;
+    visibility: visible;
+}
+.pagedrop{
+    width: 100%;
+    height: max-content;
+    border: 1px solid;
+    background-color: white;
+    opacity: 0;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    visibility: hidden;
+    color: black;
+    transition: .5s;
+    display: flex;
+    z-index: 100;
+
+}
+.pagedrop ul{
+    width: 50%;
+}
+.pagedrop ul li{
+    padding: 10px 20px;
+}
+.pagedrop ul li:first-child{
+    color: red;
+}
+.pagedrop:hover{
+    opacity: 1;
+    visibility: visible;
+}
+nav>ul>.page:hover~.pagedrop{
+    opacity: 1;
+    visibility: visible;
+}
+nav>ul>li:hover{    
+    cursor: pointer;
+    text-decoration: line-through;
+}
+nav>ul>li:first-child{
+    text-decoration: line-through;
+}
+.aboutdrop{
+    width: 100%;
+    height: max-content;
+    border: 1px solid;
+    background-color: white;
+    opacity: 0;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    visibility: hidden;
+    color: black;
+    transition: .5s;
+    display: flex;
+    z-index: 100;
+
+}
+.aboutdrop ul{
+    width: 50%;
+}
+.aboutdrop ul li{
+    padding: 10px 20px;
+}
+.aboutdrop ul li:first-child{
+    color: red;
+}
+.aboutdrop:hover{
+    opacity: 1;
+    visibility: visible;
+}
+.aboutdrop{
+    width: 100%;
+    height: max-content;
+    border: 1px solid;
+    background-color: white;
+    opacity: 0;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    visibility: hidden;
+    color: black;
+    transition: .5s;
+    display: flex;
+    z-index: 100;
+
+}
+.aboutdrop ul{
+    width: 50%;
+}
+.aboutdrop ul li{
+    padding: 10px 20px;
+}
+.aboutdrop ul li:first-child{
+    color: red;
+}
+.aboutdrop:hover{
+    opacity: 1;
+    visibility: visible;
+}
+nav>ul>.about:hover~.aboutdrop{
+    opacity: 1;
+    visibility: visible;
+}
+.blogdrop{
+    width: 100%;
+    height: max-content;
+    border: 1px solid;
+    background-color: white;
+    opacity: 0;
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    visibility: hidden;
+    color: black;
+    transition: .5s;
+    display: flex;
+    z-index: 100;
+
+}
+.blogdrop ul{
+    width: 50%;
+}
+.blogdrop ul li{
+    padding: 10px 20px;
+}
+.blogdrop ul li:first-child{
+    color: red;
+}
+.blogdrop:hover{
+    opacity: 1;
+    visibility: visible;
+}
+nav>ul>.blog:hover~.blogdrop{
+    opacity: 1;
+    visibility: visible;
+}
+.icons{
+    cursor: pointer;
+    letter-spacing: 10px;
+}
+#bar{
+    display: none;
+}
+header{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-image: url(./img/port-098-copyright1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.content1{
+    width: max-content;
+    height: max-content;
+    padding: 20px;
+    /* border: 1px solid black; */
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+}
+.content1 p{
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.content1 h1{
+    cursor: pointer;
+    font-size: 50px;
+    margin: 10px 0;
+}
+.btn{
+    padding: 15px 40px;
+    background-color: transparent;
+    border: 3px solid white;
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+    margin: 20px 0 0 20px;
+    border-radius: 5px;
+    transition: .5s;
+    font-weight: 600;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+#rightn{
+    display: none;
+}
+.btn:hover #rightn{ 
+    padding-left: 30px;
+    display: inline;
+    transition: .5s;
+}
+.imgbox{
+    display: block;
+    margin-top: 30px;
+}
+#img1{
+    width: 20px;
+}
+.main1{
+    width: 100%;
+    height: max-content;
+    /* border: 1px solid black; */
+    padding: 80px;
+}
+.main1-content{
+    width: 65%;
+    height: max-content;
+    /* border: 1px solid black; */
+    margin-bottom: 80px;
+}
+.main1-content h1{
+    font-weight: 500;
+    font-size: 47px;
+}
+.main1-content p{
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    margin: 30px 0;
+    color: gray;
+    font-size: 17px;
+}
+.main1imgbox{
+    width: 100%;
+    height: max-content;
+    /* border: 1px solid; */
+    display: flex;
+}
+.main1child{
+    width: 50%;
+    height: max-content;
+    /* border: 1px solid; */
+}
+.main1child1 p{
+    margin: 53px;
+}
+.img{
+    width: 93%;
+    cursor: pointer;
+    margin: 40px 0;
+}
+ .main1child2{
+     text-align: right; 
+}
+.img-1{
+    width: 78%;
+}
+.button{
+    width: 100%;
+    height: max-content;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+.button button{
+    padding: 20px 50px ;
+    background-color: #E93314;
+    color: white;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 15px;
+}
+.button button:hover{
+    background-color: #C32206;
+}
+.main2{
+    width: 100%;
+    height: max-content;
+    /* border: 1px solid; */
+    padding: 70px;
+}
+.main2-1{
+    width: 100%;
+    height: max-content;
+    /* border: 1px solid black; */
+    display: flex;
+}
+.check{
+    margin: 30px;
+}
+.box1 {
+    width: 31%;
+    text-transform: capitalize;
+    height: max-content;
+    box-shadow: 0px 0px 0px 0.5px #ccc;
+    margin: 1%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.box1 img{
+    width: 100%;
+    opacity: 0;
+    transition: .5s ;
+}
+.box1:hover .omg2{
+    opacity: 1;
+    scale: 1.1;
+}
+.contern{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 30px 20px;
+    transition: .5s;
+
+}
+.box1:hover .contern{
+    background-color: rgba(0, 0, 0, 0.39);
+}
+
+.contern p{
+    color: #E93314;
+    transition: .5s;
+}
+
+.contern span{
+    color: gray;
+    transition: .5s;
+}   
+.contern h1{
+    font-style: italic;
+    margin: 30px 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+.box1:hover .contern{
+    color: white;
+}
+.box1:hover .contern p{
+    color: white;
+}
+.box1:hover .contern span{
+    color: white;
+}
+
+
+
+
+
+footer{ 
+    width: 100%;
+    height: max-content;
+    background-color: black;
+    padding: 50px;
+}
+.footeruper{
+    width: 100%;
+    height:max-content;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 80px;
+    flex-wrap: wrap;
+}
+.footeruper div img{
+    cursor: pointer;
+}
+.footeruper div{
+    width: 18%;
+    margin: 1%;
+    height: max-content;
+    color: white;
+    font-size: 20px;
+    text-transform: capitalize;
+    line-height: 38px;
+}
+.footericons{
+    display: flex;
+    margin-top: 20px;
+}
+.footeruper div i{
+    letter-spacing: 20px;
+    cursor: pointer;
+    display: block;
+}
+.footeruper div i:hover{
+    margin-top: 10px;
+    color: gray;
+}
+.footeruper li{
+    color: gray;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+.footeruper li:hover{
+    margin-left: 10px;
+    transition: .5s;
+    color: white;
+    text-decoration: underline 2px  ;
+}
+.footerbotom{
+    border-top: 1px solid;
+    width: 100%;
+    height: max-content;
+    padding: 50px 0px 0px 0;
+    color: gray;
+    cursor: pointer;
+}
+.footerbotom::after{
+    margin-left: 20px;
+    content: "© 2024. All Rights Reserved.    ";
+}
+
+@media screen and (max-width:1050px) {
+    .contern h1{
+        font-size: 20px;
+    }
+    .main1-content{
+        width: 100%;
+    }
+}
+@media screen and (max-width:924px) {
+    .footeruper div{
+        width: 46%;
+    }
+    .contern h1{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:850px) {
+    .main2-1{
+        flex-direction: column;
+        padding: 8%;
+    }
+    .main1imgbox{
+        flex-direction: column;
+        padding: 10%;
+    }
+    .main1imgbox img{
+        width: 100%;
+    }
+    .main1child{
+        width: 100%;
+    }
+    .box1{
+        margin: 30px 0;
+        width: 100%;
+    }
+
+}
+@media screen and (max-width:800px) {
+    .store,.About{
+        display: none;
+    }
+    #vertical{
+        display: block;
+    }
+}
+@media screen and (max-width:785px) {
+    .content1 p ,.imgbox{
+        display: none;
+    }
+    .main1-content h1{
+        font-size: 30px;
+    }
+    .content1 h1{
+        font-size: 35px;
+    }
+    .main1{
+        padding: 3%;
+    }
+}
+@media screen and (max-width:660px) {
+    nav>ul{
+        display: none;
+    }
+    #bar{
+        display: inline;
+    }
+    .main1child1 p{
+        margin: 20px;
+        text-align: center;
+    }
+    .img{
+        margin: 10px 0;
+    }
+}
+@media screen and (max-width:500px) {
+    .footeruper div{
+        width: 96%;
+    }
+    .content1 h1{
+        font-size: 30px;
+        font-weight: 400;
+    }
+    .main1-content h1{
+        font-size: 20px;
+    }
+
+    .main1-content p{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:450px) {
+    nav{
+        padding: 10px;
+    }
+    .main2{
+        padding: 0px;
+    }
+    .box1{
+        margin: 1%;
+    }
+
+}
